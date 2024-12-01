@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Home page</title>
+	<style type="text/css">
+		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background-color: #dbdbdb;
+		}
+		
+		.header{
+			background-image: linear-gradient(to left, #923333, #341818);
+			height: 70px;
+			width: 100%;
+			background-size: cover;
+			position: sticky;
+			position: webkit-sticky;
+			top: 0px;
+		}
+
+		#logo{
+			height: 60px;
+			width: 70px;
+			margin-top: 4px;
+			margin-left: 15px;
+			transition: 0.5s ease-in-out;
+		}
+
+		#COACHIFY{
+			font-family: "Copperplate", fantasy;
+			font-style: italic;
+			color: white;
+			margin-left: 90px;
+			margin-top: -50px;
+			font-size: 20px;
+			letter-spacing: 2px;
+		}
+
+		#motto{
+			color: white;
+			font-family: "Lucida console", monospace;
+			font-size: 10px;
+			margin-left: 90px;
+			margin-top: -5px;
+			word-spacing: -1px;
+			font-style: italic;
+		}
+
+		.headerbuttons{
+			font-family: "Futura", sans-serif;
+			color: white;
+		}
+
+		#aboutusbttn{
+			margin-left: 750px;
+			margin-top: -40px;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 100px;
+			color: white;
+		}
+
+		#supportbttn{
+			margin-top: -30px;
+			margin-left: 850px;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 150px;
+			color: red;
+		}
+
+		#aboutusbttn:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#supportbttn:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#logo:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+		}
+
+		#userprofpic{
+			border-radius: 1500px;
+			width: 40px;
+			height: 40px;
+			margin-left: 1260px;
+			margin-top: -40px;
+			position: absolute;
+		}
+
+		#username{
+			font-family: "Futura", sans-serif;
+			color: white;
+			margin-top: -30px;
+			margin-left: 1310px;
+			font-size: 20px;
+			position: absolute;
+		}
+
+		#arrowdown{
+			margin-top: -30px;
+			margin-left: 1370px;
+			color: white;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 25px;
+			position: absolute;
+		}
+
+		#arrowdown:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+		}
+
+		#login{
+			font-size: 35px;
+			margin-left: 1440px;
+			margin-top: -40px;
+			position: absolute;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			color: white;
+		}
+
+		#login:hover{
+			color: red;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		.sidenav{
+			width: 100px;
+			height: 100%;
+			background-image: linear-gradient(to top, #923333, #341818);
+			position: fixed;
+		}
+
+		#supportP{
+			font-size: 30px;
+			margin-top: 250px;
+			margin-left: 20px;
+			text-align: center;
+		}
+
+
+		.material-icons{
+			color: white;
+			font-size: 50px;
+		}
+
+		.fa{
+			color: white;
+			font-size: 45px;
+		}
+
+		.glyphicon{
+			color: white;
+			font-size: 45px;
+		}
+
+		.fas{
+			color: white;
+			font-size: 50px;
+			margin-left: 100px;
+		}
+
+		.fa-solid{
+			color: white;
+			font-size: 40px;
+		}
+
+		#loginP{
+			font-family: "arial";
+			font-size: 10px;
+			color: white;
+			margin-left: 1447px;
+			margin-top: -3px;
+		}
+
+		#searchbar{
+			border: 1px solid #ccc;  
+			border-radius: 5px;
+			margin-left: 1010px;
+			height: 30px;
+			margin-top: -35px;
+			position: absolute;
+			width: 200px;
+			background-image: url('searchicon.png');
+			background-position: 5px 5px; 
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
+			padding: 12px 20px 12px 40px;
+		}
+
+		#profileICN{
+			margin-left: 25px;
+			margin-top: 40px;
+			position: absolute;
+			transition: 0.4s ease-in-out;
+		}
+
+		#dashboardICN{
+			margin-top: 440px;
+			position: absolute;
+			margin-left: 27px;
+			font-size: 46px;
+			transition: 0.4s ease-in-out;
+		}
+
+		#schedulingICN{
+			margin-top: 240px;
+			position: absolute;
+			margin-left: 31px;
+			font-size: 43px;
+			transition: 0.4s ease-in-out;
+		}
+
+		#progressICN{
+			position: absolute;
+			margin-top: 340px;
+			margin-left: 26px;
+			transition: 0.4s ease-in-out;
+		}
+
+		#trainingICN{
+			position: absolute;
+			margin-top: 140px;
+			margin-left: 26px;
+			font-size: 37px;
+			transition: 0.4s ease-in-out;
+		}
+
+		.sidenavP{
+			font-family: "arial";
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-size: 10px;
+		}
+
+		#profileP{
+			margin-top: 93px;
+		}
+		#dashboardP{
+			margin-top: 84px;
+		}
+		#schedulingP{
+			margin-top: 87px;
+		}
+		#progressP{
+			margin-top: 87px;
+		}
+		#trainingP{
+			margin-top: 80px;
+		}
+
+
+		#profileICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#dashboardICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#schedulingICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#progressICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#trainingICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"><img src="coachifybg.png" id="logo"></a>
+		<h1 id="COACHIFY">COACHIFY</h1>
+		<p id="motto">Fulfilling Athletes Dreams</p>
+		<div class="headerbuttons">
+			<a href="index.html"><p id="aboutusbttn">About Us</p></a>
+			<p id="supportbttn">Help & Support</p>
+		</div>
+		<input type="text" placeholder="Search.." id="searchbar">
+		<div>
+			<img src="user.jpg" id="userprofpic">
+			<h1 id="username">Guest</h1>
+			<img src="arrow down.png" id="arrowdown">
+		</div>
+		<div class="loginheader">
+			<a href="login.html"><i class='fas fa-sign-in-alt' id="login"></i></a>
+			<p id="loginP">Log in</p>
+		</div>
+	</div>
+
+	<div class="sidenav">
+		<div class="ICN">
+			<i class="material-icons" id="profileICN">person_outline</i>
+			<i class="fa fa-calendar" id="schedulingICN"></i>
+			<span class="glyphicon glyphicon-stats" id="progressICN"></span>
+			<i class="fa-solid fa-dumbbell" id="trainingICN"></i>
+	    </div>
+
+		<div class="sidenavP">
+			<p id="profileP">PROFILE</p>
+			<p id="trainingP">TRAINING PLAN</p>
+			<p id="schedulingP">SCHEDULING</p>
+			<p id="progressP">PROGRESS</p>
+	    </div>
+	</div>
+
+	<div class="content">
+		<p id="supportP">Support is not available at the moment.</p>
+    </div>
+</body>
+</html>

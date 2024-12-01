@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Dashboard</title>
+</head>
+<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background-image: linear-gradient(to bottom, #dbdbdb, #5e5e5e);
+		}
+		.header{
+			background-image: linear-gradient(to left, #923333, #341818);
+			height: 70px;
+			width: 100%;
+			background-size: cover;
+			position: sticky;
+			position: webkit-sticky;
+			top: 0px;
+			z-index: 10;
+		}
+
+		#logo{
+			height: 60px;
+			width: 70px;
+			margin-top: 4px;
+			margin-left: 15px;
+			transition: 0.5s ease-in-out;
+		}
+
+		#COACHIFY{
+			font-family: "Copperplate", fantasy;
+			font-style: italic;
+			color: white;
+			margin-left: 90px;
+			margin-top: -50px;
+			font-size: 20px;
+			letter-spacing: 2px;
+			text-shadow: 3px 3px #595959;
+		}
+
+		#motto{
+			color: white;
+			font-family: "Lucida console", monospace;
+			font-size: 10px;
+			margin-left: 90px;
+			margin-top: -5px;
+			word-spacing: -1px;
+			font-style: italic;
+		}
+
+		.headerbuttons{
+			font-family: "Futura", sans-serif;
+			color: white;
+		}
+
+		#aboutusbttn{
+			margin-left: 750px;
+			margin-top: -40px;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 100px;
+			color: white;
+		}
+
+		#supportbttn{
+			margin-top: -30px;
+			margin-left: 850px;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 150px;
+			color: white;
+		}
+
+		#aboutusbttn:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#supportbttn:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#logo:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+		}
+
+		#userprofpic{
+			border-radius: 1500px;
+			width: 40px;
+			height: 40px;
+			margin-left: 1260px;
+			margin-top: -40px;
+			position: absolute;
+		}
+
+		#username{
+			font-family: "Futura", sans-serif;
+			color: white;
+			margin-top: -30px;
+			margin-left: 1310px;
+			font-size: 20px;
+			position: absolute;
+		}
+
+		#arrowdown{
+			margin-top: -30px;
+			margin-left: 1370px;
+			color: white;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			width: 25px;
+			position: absolute;
+		}
+
+		#arrowdown:hover{
+			transform: scale(1.2);
+			cursor: pointer;
+		}
+
+		#login{
+			font-size: 35px;
+			margin-left: 1440px;
+			margin-top: -40px;
+			position: absolute;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			color: white;
+		}
+
+		#login:hover{
+			color: red;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		.sidenav{
+			width: 100px;
+			height: 100%;
+			background-image: linear-gradient(to top, #923333, #341818);
+			position: fixed;
+			z-index: 5;
+		}
+
+		.material-icons{
+			color: white;
+			font-size: 50px;
+		}
+
+		.fa{
+			color: white;
+			font-size: 45px;
+		}
+
+		.glyphicon{
+			color: white;
+			font-size: 45px;
+		}
+
+		.fas{
+			color: white;
+			font-size: 50px;
+			margin-left: 100px;
+		}
+
+		.fa-solid{
+			color: white;
+			font-size: 40px;
+		}
+
+		#loginP{
+			font-family: "arial";
+			font-size: 10px;
+			color: white;
+			margin-left: 1447px;
+			margin-top: -3px;
+		}
+
+		#searchbar{
+			border: 1px solid #ccc;  
+			border-radius: 5px;
+			margin-left: 1010px;
+			height: 30px;
+			margin-top: -35px;
+			position: absolute;
+			width: 200px;
+			background-image: url('searchicon.png');
+			background-position: 5px 5px; 
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
+			padding: 12px 20px 12px 40px;
+		}
+
+		#profileICN{
+			margin-left: 25px;
+			margin-top: 40px;
+			position: absolute;
+			transition: 0.4s ease-in-out;
+		}
+
+		#dashboardICN{
+			margin-top: 440px;
+			position: absolute;
+			margin-left: 27px;
+			font-size: 46px;
+			transition: 0.4s ease-in-out;
+			color: red;
+		}
+
+		#schedulingICN{
+			margin-top: 226px;
+			position: absolute;
+			margin-left: 26px;
+			font-size: 43px;
+			transition: 0.4s ease-in-out;
+		}
+
+		#progressICN{
+			position: absolute;
+			margin-top: 340px;
+			margin-left: 26px;
+			transition: 0.4s ease-in-out;
+		}
+
+		#trainingICN{
+			position: absolute;
+			margin-top: 140px;
+			margin-left: 26px;
+			font-size: 37px;
+			transition: 0.4s ease-in-out;
+		}
+
+		.sidenavP{
+			font-family: "arial";
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-size: 10px;
+		}
+
+		#profileP{
+			margin-top: 93px;
+		}
+		#dashboardP{
+			margin-top: 84px;
+		}
+		#schedulingP{
+			margin-top: 87px;
+		}
+		#progressP{
+			margin-top: 87px;
+		}
+		#trainingP{
+			margin-top: 80px;
+		}
+
+
+		#profileICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#dashboardICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#schedulingICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#progressICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		#trainingICN:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+			color: #bfbfbf;
+		}
+
+		.aboutUs{
+			background-color: white;
+			width: 1005px;
+			margin-left: 300px;
+			border-radius: 20px;
+			box-shadow: 5px 5px 5px 5px #b5b5b5;
+			margin-top: 50px;
+			border: 0px solid black;
+			height: 280px;
+		}
+
+		#AboutUsLogo{
+			height: 200px;
+			border: 10px;
+			margin-left: 20px;
+			margin-top: 0px;
+		}
+
+		#aboutUsP{
+			width: 700px;
+			text-align: justify;
+			margin-left: 260px;
+			margin-top: -170px;
+			font-size: 20px;
+		}
+
+		#aboutusH1{
+			font-family: "arial";
+			font-style: italic;
+			margin-left: 30px;
+		}
+
+		*{
+			box-sizing: border-box
+		}
+
+		body{
+			font-family: Verdana, sans-serif; margin:0
+		}
+
+		.mySlides{
+			display: none;
+			opacity: 0;
+			transition: opacity 1.5s ease-in-out;
+		}
+
+		.mySlides.active{
+			display: block;
+			opacity: 1;
+		}
+
+		img{
+			vertical-align: middle;
+		}
+
+		.slideshow-container{
+			max-width: 1430px;
+			position: relative;
+			margin: auto;
+			margin-top: 70px;
+			margin-left: 100px;
+		}
+
+		.prev, .next{
+			cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: grey;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next{
+        	right: 0;
+        	border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover{
+        	background-color: rgba(0,0,0,0.8);
+        }
+
+        .text{
+        	color: black;
+        	font-size: 20px;
+        	padding: 8px 12px;
+        	position: absolute;
+        	bottom: 8px;
+        	width: 100%;
+        	text-align: center;
+        }
+
+        .numbertext{
+        	color: #f2f2f2;
+        	font-size: 12px;
+        	padding: 8px 12px;
+        	position: absolute;
+        	top: 0;
+        }
+
+        .dot{
+        	cursor: pointer;
+        	height: 15px;
+        	width: 15px;
+        	margin: 0px 2px;
+        	background-color: #bbb;
+        	border-radius: 50%;
+        	display: inline-block;
+        	transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover{
+        	background-color: #717171;
+        }
+
+        .fade{
+        	animation-name: fade;
+        	animation-duration: 3.0s;
+        }
+
+        @keyframes fade{
+        	from {opacity: .4} 
+        	to {opacity: 1}
+        }
+
+        #text2{
+        	color: white;
+        }
+
+        .imageGallery{
+        	background-image: linear-gradient(to left #949494, #919191);
+        	height: 600px;
+        }
+
+        #SportsH{
+        	color: black;
+        	margin-left: 200px;
+        	font-family: "arial";
+        	font-style: italic;
+        	margin-top: 30px;
+        	position: absolute;
+        	font-weight: bold;
+        	text-shadow: 2px 2px #ababab;
+        }
+
+        .box1{
+        	background-color: white;
+        	width: 200px;
+        	margin-left: 150px;
+        	height: 150px;
+        	position: absolute;
+        	margin-top: 100px;
+        	border-radius: 20px;
+        	box-shadow: 5px 5px 5px 5px #595959;
+        }
+
+        #badmintonIMG{
+        	height: 180px;
+        	width: 300px;
+        	margin-left: 0px;
+        	border-radius: 20px 20px 0px 0px;
+        }
+
+        #badmintonH{
+        	color: black;
+        	font-size: 25px;
+        	margin-left: 10px;
+        	font-weight: bold;
+        	margin-left: 20px;
+        }
+
+        #badmintonP{
+        	color: black;
+        	font-size: 20px;
+        	margin-left: 10px;
+        	text-align: center;
+        	width: 250px;
+        	margin: auto;
+        	margin-top: 30px;
+        }
+
+        .box2{
+        	background-color: white;
+        	width: 200px;
+        	margin-left: 485px;
+        	height: 150px;
+        	position: absolute;
+        	margin-top: 100px;
+        	border-radius: 20px;
+        	box-shadow: 5px 5px 5px 5px #595959;
+        }
+
+        #basketballIMG{
+        	height: 180px;
+        	width: 300px;
+        	margin-left: 0px;
+        	border-radius: 20px 20px 0px 0px;
+        }
+
+        #basketballH{
+        	color: black;
+        	font-size: 25px;
+        	margin-left: 10px;
+        	font-weight: bold;
+        	margin-left: 20px;
+        }
+
+        #basketballP{
+        	color: black;
+        	font-size: 20px;
+        	margin-left: 10px;
+        	text-align: center;
+        	width: 250px;
+        	margin: auto;
+        	margin-top: 30px;
+        }
+
+        .box3{
+        	background-color: white;
+        	width: 200px;
+        	margin-left: 825px;
+        	height: 150px;
+        	position: absolute;
+        	margin-top: 100px;
+        	border-radius: 20px;
+        	box-shadow: 5px 5px 5px 5px #595959;
+        }
+
+        #volleyballIMG{
+        	height: 180px;
+        	width: 300px;
+        	margin-left: 0px;
+        	border-radius: 20px 20px 0px 0px;
+        }
+
+        #volleyballH{
+        	color: black;
+        	font-size: 25px;
+        	margin-left: 10px;
+        	font-weight: bold;
+        	margin-left: 20px;
+        }
+
+        #volleyballP{
+        	color: black;
+        	font-size: 20px;
+        	margin-left: 10px;
+        	text-align: center;
+        	width: 250px;
+        	margin: auto;
+        	margin-top: 30px;
+        }
+
+        .box4{
+        	background-color: white;
+        	width: 200px;
+        	margin-left: 1165px;
+        	height: 400px;
+        	position: absolute;
+        	margin-top: 100px;
+        	border-radius: 20px;
+        	box-shadow: 5px 5px 5px 5px #595959;
+        }
+
+        #footballIMG{
+        	height: 180px;
+        	width: 300px;
+        	margin-left: 0px;
+        	border-radius: 20px 20px 0px 0px;
+        }
+
+        #footballH{
+        	color: black;
+        	font-size: 25px;
+        	margin-left: 10px;
+        	font-weight: bold;
+        	margin-left: 20px;
+        }
+
+        #footballP{
+        	color: black;
+        	font-size: 20px;
+        	margin-left: 10px;
+        	text-align: center;
+        	width: 250px;
+        	margin: auto;
+        	margin-top: 30px;
+        }
+
+        #learnmore1{
+        	color: slateblue;
+        	margin-left: 110px;
+        	margin-top: 20px;
+        	transition: 0.5s ease-in-out;
+        	width: 100px;
+        }
+
+        #learnmore2{
+        	color: slateblue;
+        	margin-left: 110px;
+        	margin-top: 20px;
+        	transition: 0.5s ease-in-out;
+        	width: 100px;
+        }
+
+        #learnmore3{
+        	color: slateblue;
+        	margin-left: 110px;
+        	margin-top: 20px;
+        	transition: 0.5s ease-in-out;
+        	width: 100px;
+        }
+
+        #learnmore4{
+        	color: slateblue;
+        	margin-left: 110px;
+        	margin-top: 20px;
+        	transition: 0.5s ease-in-out;
+        	width: 100px;
+        }
+
+        #learnmore1:hover{
+        	transform: scale(1.1);
+			cursor: pointer;
+        }
+
+        #learnmore2:hover{
+        	transform: scale(1.1);
+			cursor: pointer;
+        }
+
+        #learnmore3:hover{
+        	transform: scale(1.1);
+			cursor: pointer;
+        }
+
+        #learnmore4:hover{
+        	transform: scale(1.1);
+			cursor: pointer;
+        }
+
+        #YTvideo{
+        	margin-top: 170px;
+        	width: 600px;
+        	height: 400px;
+        	margin-left: 200px;
+        	border-radius: 10px;
+        	box-shadow: 5px 5px 5px 5px #ababab;
+        }
+
+        #map{
+        	margin-top: 100px;
+        	width: 1215px;
+        	height: 400px;
+        	margin-left: 200px;
+        	border-radius: 10px;
+        	box-shadow: 5px 5px 5px 5px #ababab;
+        }
+
+        #YTvideo2{
+        	width: 600px;
+        	height: 400px;
+        	margin-left: 10px;
+        	border-radius: 10px;
+        	box-shadow: 5px 5px 5px 5px #ababab;
+        }
+
+        .footer{
+        	background-color: #111111;
+        	margin-top: 1100px;
+        	height: 203px;
+        }
+
+        #footerlogo{
+        	height: 100px;
+        	margin-left: 250px;
+        	margin-top: 30px;
+        }
+        #footermotto{
+        	color: white;
+        	margin-left: 200px;
+        	font-family: "Lucida console", monospace;
+			font-size: 15px;
+			word-spacing: -1px;
+			font-style: italic;
+			letter-spacing: -1px;
+        }
+
+        #locationP{
+        	font-family: "arial";
+        	font-weight: bold;
+        	font-style: italic;
+        	color: black;
+        	text-shadow: 2px 2px #ababab;
+        	position: absolute;
+        	margin-left: 230px;
+        	margin-top: 40px;
+        }
+
+        #videoP{
+        	font-family: "arial";
+        	font-weight: bold;
+        	font-style: italic;
+        	color: black;
+        	text-shadow: 2px 2px #ababab;
+        	position: absolute;
+        	margin-left: 230px;
+        	margin-top: 110px;
+        }
+
+        #footercopyright{
+        	font-family: "arial";
+        	color: white;
+        	margin-left: 710px;
+        	margin-top: 20px;
+        }
+
+        .fa-facebook{
+        	background: white;
+        	color: black;
+        }
+
+        .fa-twitter{
+        	background: white;
+        	color: black;
+        }
+
+        .fa-google{
+        	background: white;
+        	color: black;
+        }
+
+        .fa-instagram{
+        	background: white;
+        	color: black;
+        }
+
+        .fa-reddit{
+        	background: white;
+        	color: black;
+        }
+
+        .fa{
+        	padding: 5px;
+        	font-size: 25px;
+        	width: 40px;
+        	margin: 5px 2px;
+        	border-radius: 10px;
+        	height: 35px;
+        	text-align: center;
+        	transition: 0.5s ease-in-out;
+        }
+
+        .apps{
+        	margin-left: 1250px;
+        	margin-top: -100px;
+        	position: absolute;
+        }
+
+        .fa:hover{
+        	transform: scale(1.2);
+			cursor: pointer;
+        }
+
+        #contactushere{
+        	color: white;
+        	font-family: "arial";
+        	font-weight: bold;
+        	margin-left: 1292px;
+        	position: absolute;
+        	margin-top: -135px;
+        	font-size: 20px;
+        }
+
+        .graphpic{
+        	margin-left: 175px;
+        	margin-top: 350px;
+        	position: absolute;
+        }
+
+        #graph1{
+        	height: 300px;
+        	width: 400px;
+        	border-radius: 50px;
+        	margin-left: -30px;
+        	box-shadow: 3px 3px 3px 3px #696969;
+        }
+
+        #graph2{
+        	height: 300px;
+        	width: 400px;
+        	border-radius: 50px;
+        	margin-left: 35px;
+        	box-shadow: 3px 3px 3px 3px #696969;
+        }
+
+        #graph3{
+        	height: 300px;
+        	width: 450px;
+        	border-radius: 50px;
+        	margin-left: 35px;
+        	box-shadow: 3px 3px 3px 3px #696969;
+        }
+
+        .stats{
+        	margin-left: 200px;
+        	margin-top: -50px;
+        }
+
+        #box1H{
+        	font-size: 25px;
+        	font-weight: bold;
+        	font-style: italic;
+        	margin-left: 19px;
+        	font-family: "Copperplate", fantasy;
+        	letter-spacing: 1px;
+        }
+        #box1P{
+        	font-size: 30px;
+        	font-family: "Copperplate", fantasy;
+        	margin-left: 110px;
+        	margin-top: 23px;
+        }
+
+        #box2H{
+        	font-size: 25px;
+        	font-weight: bold;
+        	font-style: italic;
+        	margin-left: 19px;
+        	font-family: "Copperplate", fantasy;
+        	letter-spacing: 1px;
+        }
+
+        #box2P{
+        	font-size: 30px;
+        	font-family: "Copperplate", fantasy;
+        	margin-left: 95px;
+        	margin-top: 23px;
+        }
+
+        .checked{
+        	color: orange;
+        }
+
+        #star{
+        	margin-left: 55px;
+        	margin-top: -50px;
+        	position: absolute;
+        }
+
+        #personicon{
+        	color: black;
+        	font-size: 40px;
+        	margin-left: 70px;
+        	margin-top: -53px;
+        	position: absolute;
+        }
+
+        #box3H{
+        	font-size: 25px;
+        	font-weight: bold;
+        	font-style: italic;
+        	margin-left: -25px;
+        	font-family: "Copperplate", fantasy;
+        	letter-spacing: 1px;
+        	text-align: center;
+        	width: 300px;
+        }
+
+        #box3P{
+        	font-size: 30px;
+        	font-family: "Copperplate", fantasy;
+        	margin-left: 130px;
+        	margin-top: 23px;
+        }
+
+        .box1{
+        	box-shadow: 2px 2px 2px 2px #858585;
+        }
+
+        .box2{
+        	box-shadow: 2px 2px 2px 2px #858585;
+        }
+
+        .box3{
+        	width: 250px;
+        	box-shadow: 2px 2px 2px 2px #858585;
+        }
+
+        #calendaricon{
+        	color: black;
+        	font-size: 30px;
+        	position: absolute;
+        	margin-left: 90px;
+        	margin-top: -53px;
+        }
+
+        .livefeedback{
+        	background-color: #616161;
+        	height: 300px;
+        	width: 1300px;
+        	margin-left: 165px;
+        	margin-top: 720px;
+        	position: absolute;
+        	backdrop-filter: blur(1px);
+        	border-radius: 15px;
+        }
+
+        #feedbackH{
+        	font-size: 30px;
+        	margin-left: 30px;
+        	color: white;
+        }
+
+        #catprofpic{
+        	border-radius: 1000px;
+        	height: 50px;
+        	width: 50px;
+        	margin-left: 40px;
+        	margin-top: 20px;
+        	border: 1px solid black;
+        	box-shadow: 2px 2px 2px 2px #3b3b3b;
+        }
+
+        #profileName{
+        	margin-left: 100px;
+        	margin-top: -40px;
+        }
+
+        #star2{
+        	font-size: 20px;
+        	margin-left: 310px;
+        	margin-top: -38px;
+        	position: absolute;
+        }
+
+        #rating{
+        	font-size: 25px;
+        	position: absolute;
+        	margin-left: 350px;
+        	margin-top: -41px;
+        }
+
+        #feedbackP1{
+        	margin-left: 110px;
+        }
+
+        #rating1{
+        	background-color: #474747;
+        	border-radius: 15px;
+        	width: 1200px;
+        	margin-left: 50px;
+        	height: 100px;
+        	backdrop-filter: blur(1px);
+        	color: white;
+        }
+
+        #rating1:hover{
+        	opacity: 0.8;
+        }
+
+        #rating2{
+        	background-color: #474747;
+        	border-radius: 15px;
+        	width: 1200px;
+        	margin-left: 50px;
+        	height: 100px;
+        	backdrop-filter: blur(1px);
+        	color: white;
+        	margin-top: 10px;
+        }
+
+        #rating2:hover{
+        	opacity: 0.8;
+        }
+
+        #catprofpic2{
+        	border-radius: 1000px;
+        	height: 50px;
+        	width: 50px;
+        	margin-left: 40px;
+        	margin-top: 20px;
+        	border: 1px solid black;
+        	box-shadow: 2px 2px 2px 2px #3b3b3b;
+        }
+
+        #profileName2{
+        	margin-left: 100px;
+        	margin-top: -40px;
+        }
+
+        #star3{
+        	font-size: 20px;
+        	margin-left: 310px;
+        	margin-top: -38px;
+        	position: absolute;
+        }
+
+        #rating3{
+        	font-size: 25px;
+        	position: absolute;
+        	margin-left: 350px;
+        	margin-top: -41px;
+        }
+
+        #feedbackP2{
+        	margin-left: 110px;
+        }
+
+        .content{
+        	background-color: white;
+        	border-radius: 20px;
+        }
+        
+</style>
+<body>
+
+	<div class="header">
+		<a href="homepage.html"><img src="coachifybg.png" id="logo"></a>
+		<h1 id="COACHIFY">COACHIFY</h1>
+		<p id="motto">Fulfilling Athletes Dreams</p>
+		<div class="headerbuttons">
+			<a href="homepage.html"><p id="aboutusbttn">About Us</p></a>
+			<a href="support2.html"><p id="supportbttn">Help & Support</p></a>
+		</div>
+		<input type="text" placeholder="Search.." id="searchbar">
+		<div>
+			<img src="cat.jfif" id="userprofpic">
+			<h1 id="username">Admin</h1>
+			<img src="arrow down.png" id="arrowdown">
+		</div>
+
+		<div class="loginheader">
+			<a href="index.html"><i class='fas fa-sign-out-alt'id="login"></i></a>
+			<p id="loginP">Log out</p>
+		</div>
+	</div>
+
+	<div class="sidenav">
+		<div class="ICN">
+			<i class="material-icons" id="profileICN">person_outline</i>
+			<a href="dashboard.html"><i class="material-icons" id="dashboardICN">dashboard</i></a>
+			<i class="fa fa-calendar" id="schedulingICN"></i>
+			<span class="glyphicon glyphicon-stats" id="progressICN"></span>
+			<i class="fa-solid fa-dumbbell" id="trainingICN"></i>
+	    </div>
+
+		<div class="sidenavP">
+			<p id="profileP">PROFILE</p>
+			<p id="trainingP">TRAINING PLAN</p>
+			<p id="schedulingP">SCHEDULING</p>
+			<p id="progressP">PROGRESS</p>
+			<p id="dashboardP">DASHBOARD</p>
+	    </div>
+	</div>
+
+	<div class="content">
+		<div class="stats">
+			<div class="box1">
+				<h1 id="box1H">Current Users</h1>
+				<p id="box1P">1</p>
+				<i class="material-icons" id="personicon">person</i>
+			</div>
+
+			<div class="box2">
+				<h1 id="box2H">Overall Rating</h1>
+				<p id="box2P">4.5</p>
+			    <span class="fa fa-star checked" id="star"></span>
+			</div>
+
+			<div class="box3">
+				<h1 id="box3H">Upcoming Booking</h1>
+				<p id="box3P">0</p>
+				<i class="fa fa-calendar" id="calendaricon"></i>
+			</div>
+		</div>
+		<div class="graphpic">
+			<img src="linegraph1.png" id="graph1">
+			<img src="linegraph2.jpg" id="graph2">
+			<img src="linegraph3.png" id="graph3">
+		</div>
+
+		<div class="livefeedback">
+			<h1 id="feedbackH">Live Feedback</h1>
+			<div class="livefeedbackProfile1">
+				<div id="rating1">
+					<img src="cat2.jpg" id="catprofpic">
+					<h3 id="profileName">Owner (Admin)</h3>
+					<span class="fa fa-star checked" id="star2"></span>
+					<p id="rating">5.0</p>
+					<p id="feedbackP1">"Testing, testing. Live feedback is awesome!"</p>
+			    </div>
+
+			    <div id="rating2">
+					<img src="cat3.jpg" id="catprofpic2">
+					<h3 id="profileName2">Admin (Tester)</h3>
+					<span class="fa fa-star checked" id="star3"></span>
+					<p id="rating3">4.0</p>
+					<p id="feedbackP2">"Ez Defense!"</p>
+			    </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="footer">
+	<img src="coachifybg.png" id="footerlogo">
+	<p id="footermotto">Fulfilling athletes dreams</p>
+	<p id="footercopyright">Copyright. All rights reserved.</p>
+	<p id="contactushere">Contact Us Here</p>
+	<div class="apps">
+		<a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+
+		<a href="https://x.com/?lang=en" target="_blank" class="fa fa-twitter"></a>
+
+		<a href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&ifkv=AcMMx-cppxHLac9TyWfKv-vTk3U8eTRKle8kC3hr-aO785HixOHQYDd7XFMNVevzJBdxtDiyV2iY&ddm=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="fa fa-google" target="_blank"></a>
+
+		<a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+
+		<a href="https://www.reddit.com" target="_blank" class="fa fa-reddit"></a>
+	</div>
+</div>
+</body>
+</html>

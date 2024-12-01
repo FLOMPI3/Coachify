@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		.loginform{
+			border-radius: 30px;
+			background-image: linear-gradient(to bottom, #923333, #341818);
+			width: 500px;
+			margin: auto;
+			height: 600px;
+			margin-top: 50px;
+			border: 2px solid black;
+			margin-left: 500px;
+			margin-top: 50px;
+		}
+
+		#username{
+			border-radius: 10px;
+			height: 60px;
+			width: 390px;
+			margin-left: 50px;
+			margin-top: -5px;
+		}
+
+		#password{
+			border-radius: 10px;
+			height: 60px;
+			width: 390px;
+			margin-left: 50px;
+			margin-top: 20px;
+		}
+
+		#login{
+			border-radius: 7px;
+			height: 40px;
+			width: 100px;
+			margin-left: 30px;
+			margin-top: 30px;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			border: 1px solid black;
+			background-color: white;
+			color: black;
+			font-size: 13px;
+			position: absolute;
+		}
+
+		#login:hover{
+			background-color: red;
+			color: white;
+			transform: scale(1.2);
+			cursor: pointer;
+		}
+
+		#idPara{
+			color: white;
+			font-family: "Copperplate", fantasy;
+			font-size: 40px;
+			font-style: italic;
+			letter-spacing: 3px;
+			margin-left: 220px;
+			margin-top: -55px;
+		}
+
+		.ptags{
+			color: white;
+			font-family: "arial", sans-serif;
+			font-size: 15px;
+		}
+
+		#logo{
+			height: 60px;
+			width: 70px;
+			margin-left: 150px;
+			margin-top: 30px;
+			padding: 0px;
+		}
+
+		#p1{
+			margin-left: 150px;
+			margin-top: 70px;
+			transition: 0.5s ease-in-out;
+			width: 200px;
+
+		}
+
+		#p1:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		#p2{
+			margin-left: 140px;
+			transition: 0.5s ease-in-out;
+			width: 220px;
+			color: white;
+		}
+
+		#p2:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		#p3{
+			color: white;
+			font-family: "arial";
+			font-size: 20px;
+			font-style: italic;
+			margin-left: 210px;
+		}
+
+		.fa-facebook {
+			background: #3B5998;
+			color: white;
+		}
+
+		.fa-google {
+			background: #dd4b39;
+			color: white;
+		}
+
+		.fa-twitter {
+			background: #55ACEE;
+			color: white;
+		}
+
+		.fa:hover {
+			opacity: 0.7;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		.fa {
+			padding: 20px;
+			font-size: 30px;
+			width: 30px;
+			text-align: center;
+			text-decoration: none;
+			margin: 5px 2px;
+			border-radius: 10px;
+			transition: 0.5s ease-in-out;
+		}
+
+		.icons{
+			margin-left: 135px;
+			margin-top: -10px;
+		}
+
+		.body{
+			background-image: url(bg.jpg);
+			background-size: cover;
+			height: 90vh;
+			width: 90vw;
+		}
+
+		#rememberMe{
+			color: white;
+			margin-left: 55px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body class="body">
+	<div class="loginform" >
+		<img src="coachifybg.png" id="logo">
+		<p id="idPara">Log in</p>
+		<form>
+			<input type="text" placeholder="Username" id="username">
+			<input type="password" placeholder="Password" id="password">
+		</form>
+
+		<label>
+			<input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+       </label> 
+		
+		<a href="homepage.html"><button id="login">LOG IN</button></a>
+		<div class="ptags">
+			<p id="p1">Forgot Username/Password?</p>
+			<a href="login2.html"><p id="p2">Don't have an account? Sign up</p></a>
+	    </div>
+	    <p id="p3">Login via</p>
+	    <div class="icons">
+	    		    	<a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
+	    	<a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AcMMx-eWbHjU3wyVjCjImX0IFp4qVKhUcrKNuLo8sVp94jqWGdkhQte5t78IOLEbC7iC9yk6VUDM&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1019748811%3A1732686988160838&ddm=1" class="fa fa-google" target="_blank"></a>
+	    	<a href="https://x.com/?lang=en" class="fa fa-twitter" target="_blank"></a>
+	    </div>
+	</div>
+
+</body>
+</html>
